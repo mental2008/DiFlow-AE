@@ -13,7 +13,7 @@ SERVER_PORT=7777
 SERVER_HOST="0.0.0.0"
 LOGLEVEL="INFO"
 SERVER_READY_TIMEOUT=300
-NUM_RUNS=5
+NUM_RUNS=10
 
 REGISTER_SCRIPT="examples/register_flux_schnell_txt2img_cfg_workflow.py"
 MODEL_PATH="./models/FLUX.1-schnell"

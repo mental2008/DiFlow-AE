@@ -12,7 +12,7 @@ LOG_FILES = {
 }
 
 # The first run often includes startup/warmup work. Set to False to include every run.
-SKIP_FIRST_RUN = True
+SKIP_FIRST_THREE_RUNS = True
 
 TIME_PATTERN = re.compile(
     r"For service (?P<workflow>[^,]+), Time taken: (?P<seconds>[0-9.eE+-]+) seconds"
@@ -36,7 +36,7 @@ def parse_workflow_times(log_path):
 
 
 def average_latency(times):
-    measured_times = times[1:] if SKIP_FIRST_RUN and len(times) > 1 else times
+    measured_times = times[1:] if SKIP_FIRST_THREE_RUNS and len(times) > 1 else times
     return mean(measured_times)
 
 
