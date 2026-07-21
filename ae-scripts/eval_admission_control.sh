@@ -101,7 +101,7 @@ start_profile_services() {
   SERVER_LOG="$LOG_DIR/profile_operator_latency_server.log"
 
   echo "Starting worker; log: $WORKER_LOG"
-  env LOGLEVEL=DEBUG mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=12 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
+  env LOGLEVEL=DEBUG mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=8 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
   WORKER_PID=$!
   ensure_worker_running
 
@@ -116,7 +116,7 @@ start_without_admission_control_services() {
   SERVER_LOG="$LOG_DIR/without_admission_control_server.log"
 
   echo "Starting worker; log: $WORKER_LOG"
-  env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=12 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
+  env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=8 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
   WORKER_PID=$!
   ensure_worker_running
 
@@ -131,7 +131,7 @@ start_with_admission_control_services() {
   SERVER_LOG="$LOG_DIR/with_admission_control_server.log"
 
   echo "Starting worker; log: $WORKER_LOG"
-  env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=12 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
+  env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=8 --hostfile "${HOSTFILE}" python3 diffusionflow/backend/worker.py --base-port 12500 --prefetch-models-config ./configs/prefetch_flux_models.yaml >"$WORKER_LOG" 2>&1 &
   WORKER_PID=$!
   ensure_worker_running
 
@@ -160,7 +160,7 @@ run_without_admission_control() {
   start_without_admission_control_services
   bash ae-scripts/register_workflows.sh --workflows flux_schnell --server-url http://localhost:7777
   python3 ae-scripts/run_flux_schnell_warmup.py
-  PYTHONPATH="$ROOT_DIR:${PYTHONPATH:-}" python3 ae-scripts/benchmark_client.py --server-url http://localhost:7777 --trace-file ae-scripts/traces/generated_trace_n3_rs4.0_st50000_t120_seed666.txt --workflows flux_schnell --slo-scale 2.0 --log-dir diflow-wo-admission-control
+  PYTHONPATH="$ROOT_DIR:${PYTHONPATH:-}" python3 ae-scripts/benchmark_client.py --server-url http://localhost:7777 --trace-file ae-scripts/traces/generated_trace_n3_rs8.0_st50000_t120_seed666.txt --workflows flux_schnell --slo-scale 2.0 --log-dir diflow-wo-admission-control
   stop_services
 }
 
@@ -169,7 +169,7 @@ run_with_admission_control() {
   start_with_admission_control_services
   bash ae-scripts/register_workflows.sh --workflows flux_schnell --server-url http://localhost:7777
   python3 ae-scripts/run_flux_schnell_warmup.py
-  PYTHONPATH="$ROOT_DIR:${PYTHONPATH:-}" python3 ae-scripts/benchmark_client.py --server-url http://localhost:7777 --trace-file ae-scripts/traces/generated_trace_n3_rs4.0_st50000_t120_seed666.txt --workflows flux_schnell --slo-scale 2.0 --log-dir diflow-with-admission-control
+  PYTHONPATH="$ROOT_DIR:${PYTHONPATH:-}" python3 ae-scripts/benchmark_client.py --server-url http://localhost:7777 --trace-file ae-scripts/traces/generated_trace_n3_rs8.0_st50000_t120_seed666.txt --workflows flux_schnell --slo-scale 2.0 --log-dir diflow-with-admission-control
   stop_services
 }
 

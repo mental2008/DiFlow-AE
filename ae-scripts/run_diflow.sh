@@ -25,7 +25,7 @@ SERVER_LOG_DIR="logs/run_diflow"
 SERVER_LOG="${SERVER_LOG_DIR}/server.log"
 
 # Edit this list to add/remove request rates.
-REQUEST_RATES=(0.5 1.0 2.0 3.0)
+REQUEST_RATES=(1.0 2.0 4.0 6.0 8.0)
 
 show_recent_log() {
     local log_file="$1"
@@ -65,7 +65,7 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Starting DiFlow worker..."
-env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=12 \
+env LOGLEVEL=INFO mpirun -n "${NUM_WORKERS}" --bind-to core --map-by slot:pe=8 \
     --hostfile "${HOSTFILE}" \
     python3 diffusionflow/backend/worker.py \
     --base-port "${BASE_PORT}" \
