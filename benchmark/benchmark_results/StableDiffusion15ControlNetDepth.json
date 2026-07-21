@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "StableDiffusion15ControlNetDepth",
+    "loading": {
+        "disk_to_host_mem_time": 4.511350631713867,
+        "host_mem_to_gpu_time": 0.07910628318786621,
+        "gpu_memory_required": 728694272.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.008049345016479493,
+                    "gpu_memory_used": 827612160.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.00810866355895996,
+                    "gpu_memory_used": 891532800.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.00982370376586914,
+                    "gpu_memory_used": 1021733376.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.015804815292358398,
+                    "gpu_memory_used": 1279382528.0
+                }
+            ]
+        }
+    ]
+}

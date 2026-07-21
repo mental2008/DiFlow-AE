@@ -1,0 +1,72 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "CLIP_SD15",
+    "loading": {
+        "disk_to_host_mem_time": 0.2617061138153076,
+        "host_mem_to_gpu_time": 0.029969167709350587,
+        "gpu_memory_required": 253068800.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.0030045509338378906,
+                    "gpu_memory_used": 288749568.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.0032018184661865234,
+                    "gpu_memory_used": 290421760.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.0035509586334228514,
+                    "gpu_memory_used": 294412288.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.0042134284973144535,
+                    "gpu_memory_used": 301959680.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.005154180526733399,
+                    "gpu_memory_used": 317283840.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.007771444320678711,
+                    "gpu_memory_used": 347390976.0
+                },
+                {
+                    "batch_size": 64,
+                    "execution_time": 0.013441038131713868,
+                    "gpu_memory_used": 407785472.0
+                },
+                {
+                    "batch_size": 128,
+                    "execution_time": 0.025313758850097658,
+                    "gpu_memory_used": 529721856.0
+                },
+                {
+                    "batch_size": 256,
+                    "execution_time": 0.049474477767944336,
+                    "gpu_memory_used": 773070336.0
+                },
+                {
+                    "batch_size": 512,
+                    "execution_time": 0.11096482276916504,
+                    "gpu_memory_used": 1259767296.0
+                },
+                {
+                    "batch_size": 1024,
+                    "execution_time": 0.19298195838928223,
+                    "gpu_memory_used": 2226607616.0
+                }
+            ]
+        }
+    ]
+}

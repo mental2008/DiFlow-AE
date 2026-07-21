@@ -1,0 +1,10 @@
+# Configuration file for models to be preloaded on workers
+# This file specifies which models should be loaded on all workers at startup
+
+preload_models:
+  - "Flux1Schnell"
+  - "Flux1VAE"
+  - "CLIP_Flux"
+  - "T5_Flux"
+  - "Flux1DevControlNetDepth"
+  - "Flux1DevControlNetCanny"

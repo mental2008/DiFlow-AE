@@ -1,0 +1,14 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_type_normalized": "nvidia_h800",
+    "gpu_memory_total": 85028634624,
+    "gpu_count": 1,
+    "model_name": "Flux1Dev",
+    "model_path": "/project/infattllm/lyangbk/huggingface/FLUX.1-dev",
+    "suite": "flux1",
+    "loading": {
+        "disk_to_host_mem_time": 0.22027921676635742,
+        "host_mem_to_gpu_time": 2.8708208084106444,
+        "gpu_memory_required": 23803904512.0
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "StableDiffusion35LargeControlNetCanny",
+    "loading": {
+        "disk_to_host_mem_time": 16.569502115249634,
+        "host_mem_to_gpu_time": 0.480377721786499,
+        "gpu_memory_required": 4600429056.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.0443568229675293,
+                    "gpu_memory_used": 5221855744.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.08708910942077637,
+                    "gpu_memory_used": 5797144064.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.1696171760559082,
+                    "gpu_memory_used": 6960304128.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.3356424331665039,
+                    "gpu_memory_used": 9287377920.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "FluxFlowMatchEulerDiscreteScheduler",
+    "loading": {
+        "disk_to_host_mem_time": 0.004465341567993164,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "init",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 8.139610290527343e-05,
+                    "gpu_memory_used": 8391680.0
+                }
+            ]
+        },
+        {
+            "mode": "step",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.0001568317413330078,
+                    "gpu_memory_used": 58721792.0
+                }
+            ]
+        },
+        {
+            "mode": "step_classifier_free_guidance",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.00020956993103027344,
+                    "gpu_memory_used": 75499008.0
+                }
+            ]
+        }
+    ]
+}

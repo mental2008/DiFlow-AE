@@ -1,0 +1,20 @@
+suite: flux1
+models:
+  - model_name: Flux1Dev
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: Flux1Schnell
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-schnell
+  - model_name: Flux1VAE
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: CLIP_Flux
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: T5_Flux
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: FluxTextEncoder
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: FluxLatentsGenerator
+    model_path:
+  - model_name: FluxFlowMatchEulerDiscreteScheduler
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-dev
+  - model_name: FluxSchnellFlowMatchEulerDiscreteScheduler
+    model_path: /project/infattllm/lyangbk/huggingface/FLUX.1-schnell

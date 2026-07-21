@@ -1,0 +1,20 @@
+suite: stable_diffusion_3
+models:
+  - model_name: StableDiffusion3
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers
+  - model_name: StableDiffusion3VAE
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers
+  - model_name: StableDiffusion3TextEncoder
+    model_path:
+  - model_name: CLIP_L
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers
+  - model_name: CLIP_G
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers
+  - model_name: T5
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers
+  - model_name: StableDiffusion3ControlNetCanny
+    model_path: /project/infattllm/lyangbk/huggingface/sd3-controlnet-canny
+  - model_name: StableDiffusion3ControlNetPose
+    model_path: /project/infattllm/lyangbk/huggingface/sd3-controlnet-pose
+  - model_name: FlowMatchEulerDiscreteScheduler
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-3-medium-diffusers

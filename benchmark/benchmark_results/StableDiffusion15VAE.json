@@ -1,0 +1,78 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "StableDiffusion15VAE",
+    "loading": {
+        "disk_to_host_mem_time": 0.18125629425048828,
+        "host_mem_to_gpu_time": 0.022574138641357423,
+        "gpu_memory_required": 172825088.0
+    },
+    "execution": [
+        {
+            "mode": "prepare_image",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 1.0013580322265625e-05,
+                    "gpu_memory_used": 174922240.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 9.250640869140624e-06,
+                    "gpu_memory_used": 175970816.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 8.535385131835937e-06,
+                    "gpu_memory_used": 179116544.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 8.106231689453125e-06,
+                    "gpu_memory_used": 185408000.0
+                }
+            ]
+        },
+        {
+            "mode": "decode_latents",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.026266717910766603,
+                    "gpu_memory_used": 848337920.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.050814247131347655,
+                    "gpu_memory_used": 1280908288.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.08515233993530273,
+                    "gpu_memory_used": 2354846720.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.16032052040100098,
+                    "gpu_memory_used": 4502723584.0
+                }
+            ]
+        }
+    ]
+}

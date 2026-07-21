@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "T5_Flux",
+    "loading": {
+        "disk_to_host_mem_time": 2.9159927368164062,
+        "host_mem_to_gpu_time": 1.2415303707122802,
+        "gpu_memory_required": 9525669888.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.024122190475463868,
+                    "gpu_memory_used": 9785728000.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.04366812705993652,
+                    "gpu_memory_used": 10012227584.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.0853161334991455,
+                    "gpu_memory_used": 10465226752.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.16271204948425294,
+                    "gpu_memory_used": 11371225088.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.3219386100769043,
+                    "gpu_memory_used": 13183221760.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.6384047985076904,
+                    "gpu_memory_used": 16807215104.0
+                }
+            ]
+        }
+    ]
+}

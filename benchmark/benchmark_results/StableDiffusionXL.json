@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "StableDiffusionXL",
+    "loading": {
+        "disk_to_host_mem_time": 3.649064540863037,
+        "host_mem_to_gpu_time": 0.5692957878112793,
+        "gpu_memory_required": 5243304960.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.04003729820251465,
+                    "gpu_memory_used": 5451379712.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.053950023651123044,
+                    "gpu_memory_used": 5618845184.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.08885927200317383,
+                    "gpu_memory_used": 5955347968.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.16505188941955568,
+                    "gpu_memory_used": 6628222976.0
+                }
+            ]
+        }
+    ]
+}

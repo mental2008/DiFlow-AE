@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "CLIP_SDXL_1",
+    "loading": {
+        "disk_to_host_mem_time": 0.25458407402038574,
+        "host_mem_to_gpu_time": 0.05994324684143067,
+        "gpu_memory_required": 492242944.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.0037367820739746095,
+                    "gpu_memory_used": 531972608.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.0041697025299072266,
+                    "gpu_memory_used": 538737664.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.004958677291870117,
+                    "gpu_memory_used": 550424576.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.0068190574645996095,
+                    "gpu_memory_used": 577894912.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.010306787490844727,
+                    "gpu_memory_used": 624233984.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.017642831802368163,
+                    "gpu_memory_used": 722646016.0
+                }
+            ]
+        }
+    ]
+}

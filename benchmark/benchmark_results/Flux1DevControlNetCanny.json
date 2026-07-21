@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "Flux1DevControlNetCanny",
+    "loading": {
+        "disk_to_host_mem_time": 0.038794755935668945,
+        "host_mem_to_gpu_time": 0.17505826950073242,
+        "gpu_memory_required": 1487620608.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.01093759536743164,
+                    "gpu_memory_used": 1887791104.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.020155906677246094,
+                    "gpu_memory_used": 2247796224.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.03849029541015625,
+                    "gpu_memory_used": 2969117184.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.07568273544311524,
+                    "gpu_memory_used": 4412283392.0
+                }
+            ]
+        }
+    ]
+}

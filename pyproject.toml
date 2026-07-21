@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diffusionflow"
+version = "0.1.0"
+description = "DiffusionFlow is a fast serving framework for diffusion serving workflow."
+readme = "README.md"
+authors = [
+    { name = "Lingyun Yang", email = "lyangbk@cse.ust.hk" },
+]
+
+[tool.setuptools.packages.find]
+include = ["diffusionflow*"]

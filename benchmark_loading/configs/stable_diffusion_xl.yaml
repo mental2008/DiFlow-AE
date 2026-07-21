@@ -1,0 +1,18 @@
+suite: stable_diffusion_xl
+models:
+  - model_name: StableDiffusionXL
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0
+  - model_name: StableDiffusionXLVAE
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0
+  - model_name: StableDiffusionXLTextEncoder
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0
+  - model_name: CLIP_SDXL_1
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0
+  - model_name: CLIP_SDXL_2
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0
+  - model_name: StableDiffusionXLControlNetCanny
+    model_path: /project/infattllm/lyangbk/huggingface/controlnet-canny-sdxl-1.0
+  - model_name: StableDiffusionXLControlNetDepth
+    model_path: /project/infattllm/lyangbk/huggingface/controlnet-depth-sdxl-1.0
+  - model_name: EulerDiscreteScheduler
+    model_path: /project/infattllm/lyangbk/huggingface/stable-diffusion-xl-base-1.0

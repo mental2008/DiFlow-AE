@@ -1,0 +1,1 @@
+exec bash -c 'module load "nvhpc-hpcx-cuda12/23.11" && export NVSHMEM_MPI_SUPPORT=1 && export LD_LIBRARY_PATH=$(python -c "import site; print(site.getsitepackages()[0])")/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH && exec zsh'

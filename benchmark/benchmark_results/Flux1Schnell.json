@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "Flux1Schnell",
+    "loading": {
+        "disk_to_host_mem_time": 0.20911717414855957,
+        "host_mem_to_gpu_time": 2.7357911109924316,
+        "gpu_memory_required": 23782396416.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.22370152473449706,
+                    "gpu_memory_used": 24310437376.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.4308509349822998,
+                    "gpu_memory_used": 24792808448.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.8402157306671143,
+                    "gpu_memory_used": 25764890624.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 1.6814076900482178,
+                    "gpu_memory_used": 27709054976.0
+                }
+            ]
+        }
+    ]
+}

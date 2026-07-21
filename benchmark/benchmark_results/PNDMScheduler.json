@@ -1,0 +1,46 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "PNDMScheduler",
+    "loading": {
+        "disk_to_host_mem_time": 0.03123760223388672,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "init",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 3.557205200195312e-05,
+                    "gpu_memory_used": 1024.0
+                }
+            ]
+        },
+        {
+            "mode": "step",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.00011868476867675782,
+                    "gpu_memory_used": 165376.0
+                }
+            ]
+        },
+        {
+            "mode": "step_classifier_free_guidance",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 512,
+                    "width": 512,
+                    "execution_time": 0.0001289844512939453,
+                    "gpu_memory_used": 230912.0
+                }
+            ]
+        }
+    ]
+}

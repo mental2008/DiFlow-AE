@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "FluxTextEncoder",
+    "loading": {
+        "disk_to_host_mem_time": 1.6689300537109375e-06,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 3.108978271484375e-05,
+                    "gpu_memory_used": 4198912.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 3.032684326171875e-05,
+                    "gpu_memory_used": 8394752.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 2.6655197143554687e-05,
+                    "gpu_memory_used": 16786432.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 2.6559829711914064e-05,
+                    "gpu_memory_used": 33569792.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 2.6941299438476562e-05,
+                    "gpu_memory_used": 67136512.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 2.5224685668945312e-05,
+                    "gpu_memory_used": 134269952.0
+                }
+            ]
+        }
+    ]
+}

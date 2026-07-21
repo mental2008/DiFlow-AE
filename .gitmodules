@@ -1,0 +1,6 @@
+[submodule "submodules/diffusers"]
+	path = submodules/diffusers
+	url = git@github.com:mental2008/diffusers.git
+[submodule "submodules/baselines"]
+	path = submodules/baselines
+	url = git@github.com:Suyi32/DiffusionFlow-baselines.git

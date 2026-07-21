@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "CLIP_Flux",
+    "loading": {
+        "disk_to_host_mem_time": 0.09073233604431152,
+        "host_mem_to_gpu_time": 0.029981231689453124,
+        "gpu_memory_required": 253068800.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.0029648303985595702,
+                    "gpu_memory_used": 288749568.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.003141927719116211,
+                    "gpu_memory_used": 290421760.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.003426933288574219,
+                    "gpu_memory_used": 294412288.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.004104471206665039,
+                    "gpu_memory_used": 301959680.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.005184793472290039,
+                    "gpu_memory_used": 317283840.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.007740449905395508,
+                    "gpu_memory_used": 347390976.0
+                }
+            ]
+        }
+    ]
+}

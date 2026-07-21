@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "T5",
+    "loading": {
+        "disk_to_host_mem_time": 4.319556713104248,
+        "host_mem_to_gpu_time": 1.664121150970459,
+        "gpu_memory_required": 11538935808.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.021676301956176758,
+                    "gpu_memory_used": 11637507584.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.038124704360961915,
+                    "gpu_memory_used": 11702522880.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.07169609069824219,
+                    "gpu_memory_used": 11832553472.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.13717546463012695,
+                    "gpu_memory_used": 12092614656.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.2716544151306152,
+                    "gpu_memory_used": 12612737024.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.5363383769989014,
+                    "gpu_memory_used": 13652981760.0
+                }
+            ]
+        }
+    ]
+}

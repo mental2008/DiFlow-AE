@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "StableDiffusion3ControlNetCanny",
+    "loading": {
+        "disk_to_host_mem_time": 0.8400418758392334,
+        "host_mem_to_gpu_time": 0.13295164108276367,
+        "gpu_memory_required": 1203440640.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.010147190093994141,
+                    "gpu_memory_used": 1445215744.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.019097423553466795,
+                    "gpu_memory_used": 1653589504.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.035900211334228514,
+                    "gpu_memory_used": 2070601216.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.06892004013061523,
+                    "gpu_memory_used": 2902961664.0
+                }
+            ]
+        }
+    ]
+}

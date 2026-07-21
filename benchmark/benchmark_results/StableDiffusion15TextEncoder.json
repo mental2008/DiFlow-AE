@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "StableDiffusion15TextEncoder",
+    "loading": {
+        "disk_to_host_mem_time": 1.430511474609375e-06,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 8.249282836914063e-06,
+                    "gpu_memory_used": 118272.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 6.818771362304688e-06,
+                    "gpu_memory_used": 236544.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 6.4849853515625e-06,
+                    "gpu_memory_used": 473088.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 6.628036499023438e-06,
+                    "gpu_memory_used": 946176.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 7.295608520507813e-06,
+                    "gpu_memory_used": 1892352.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 6.67572021484375e-06,
+                    "gpu_memory_used": 3784704.0
+                }
+            ]
+        }
+    ]
+}

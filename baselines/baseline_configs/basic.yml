@@ -1,0 +1,13 @@
+baseline_name: basic
+pipelines:
+  flux_schnell_txt2img_workflow:
+    - rank: 0
+    - rank: 1
+    # - rank: 4
+  flux_schnell_txt2img_controlnet_canny_workflow:
+    - rank: 2
+    # - rank: 5
+    # - rank: 6
+  flux_schnell_txt2img_controlnet_depth_workflow:
+    - rank: 3
+    # - rank: 7

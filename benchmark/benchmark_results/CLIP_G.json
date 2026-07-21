@@ -1,0 +1,47 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "CLIP_G",
+    "loading": {
+        "disk_to_host_mem_time": 31.709365844726562,
+        "host_mem_to_gpu_time": 0.29342002868652345,
+        "gpu_memory_required": 2846535680.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "execution_time": 0.014032936096191407,
+                    "gpu_memory_used": 2896673280.0
+                },
+                {
+                    "batch_size": 2,
+                    "execution_time": 0.01631960868835449,
+                    "gpu_memory_used": 2913231872.0
+                },
+                {
+                    "batch_size": 4,
+                    "execution_time": 0.01999373435974121,
+                    "gpu_memory_used": 2947762176.0
+                },
+                {
+                    "batch_size": 8,
+                    "execution_time": 0.029556989669799805,
+                    "gpu_memory_used": 3012583936.0
+                },
+                {
+                    "batch_size": 16,
+                    "execution_time": 0.048284387588500975,
+                    "gpu_memory_used": 3145053696.0
+                },
+                {
+                    "batch_size": 32,
+                    "execution_time": 0.08750286102294921,
+                    "gpu_memory_used": 3409992704.0
+                }
+            ]
+        }
+    ]
+}

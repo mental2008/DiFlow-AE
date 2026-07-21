@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "LatentsGenerator",
+    "loading": {
+        "disk_to_host_mem_time": 1.430511474609375e-06,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.007149648666381836,
+                    "gpu_memory_used": 527872.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.013467741012573243,
+                    "gpu_memory_used": 1052160.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.02610125541687012,
+                    "gpu_memory_used": 2100736.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.05143594741821289,
+                    "gpu_memory_used": 4197888.0
+                }
+            ]
+        }
+    ]
+}

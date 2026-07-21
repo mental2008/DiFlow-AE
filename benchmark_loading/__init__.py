@@ -1,0 +1,1 @@
+"""Loading-only benchmark package."""

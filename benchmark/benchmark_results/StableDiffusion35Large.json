@@ -1,0 +1,45 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 85028634624,
+    "model_name": "StableDiffusion35Large",
+    "loading": {
+        "disk_to_host_mem_time": 1.5431549549102783,
+        "host_mem_to_gpu_time": 1.9213893413543701,
+        "gpu_memory_required": 16685377536.0
+    },
+    "execution": [
+        {
+            "mode": "default",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 128,
+                    "width": 128,
+                    "execution_time": 0.12402534484863281,
+                    "gpu_memory_used": 16990275584.0
+                },
+                {
+                    "batch_size": 2,
+                    "height": 128,
+                    "width": 128,
+                    "execution_time": 0.23076562881469725,
+                    "gpu_memory_used": 17253228032.0
+                },
+                {
+                    "batch_size": 4,
+                    "height": 128,
+                    "width": 128,
+                    "execution_time": 0.4347849369049072,
+                    "gpu_memory_used": 17788089856.0
+                },
+                {
+                    "batch_size": 8,
+                    "height": 128,
+                    "width": 128,
+                    "execution_time": 0.8523268222808837,
+                    "gpu_memory_used": 18856114688.0
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+{
+    "StableDiffusion3": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion3ControlNetPose": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion3ControlNetCanny": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion35Large": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion35LargeControlNetCanny": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion35LargeControlNetDepth": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "CLIP_L": {
+        "latency_mode": 4,
+        "throughput_mode": 8
+    },
+    "CLIP_G": {
+        "latency_mode": 2,
+        "throughput_mode": 4
+    },
+    "T5": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusion3TextEncoder": {
+        "latency_mode": 2,
+        "throughput_mode": 8
+    },
+    "Flux1Dev": {
+        "latency_mode": 1,
+        "throughput_mode": 1
+    },
+    "Flux1DevControlNetCanny": {
+        "latency_mode": 1,
+        "throughput_mode": 1
+    },
+    "Flux1DevControlNetDepth": {
+        "latency_mode": 1,
+        "throughput_mode": 1
+    },
+    "CLIP_Flux": {
+        "latency_mode": 8,
+        "throughput_mode": 16
+    },
+    "T5_Flux": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusionXL": {
+        "latency_mode": 1,
+        "throughput_mode": 4
+    },
+    "StableDiffusionXLControlNetCanny": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusionXLControlNetDepth": {
+        "latency_mode": 1,
+        "throughput_mode": 2
+    },
+    "StableDiffusionXLTextEncoder": {
+        "latency_mode": 16,
+        "throughput_mode": 32
+    },
+    "CLIP_SDXL_1": {
+        "latency_mode": 4,
+        "throughput_mode": 8
+    },
+    "CLIP_SDXL_2": {
+        "latency_mode": 8,
+        "throughput_mode": 16
+    },
+    "StableDiffusion15": {
+        "latency_mode": 4,
+        "throughput_mode": 8
+    },
+    "StableDiffusion15ControlNetCanny": {
+        "latency_mode": 4,
+        "throughput_mode": 8
+    },
+    "StableDiffusion15ControlNetDepth": {
+        "latency_mode": 4,
+        "throughput_mode": 8
+    },
+    "CLIP_SD15": {
+        "latency_mode": 16,
+        "throughput_mode": 32
+    }
+}

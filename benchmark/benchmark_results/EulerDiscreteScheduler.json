@@ -1,0 +1,72 @@
+{
+    "gpu_type": "NVIDIA H800",
+    "gpu_memory_total": 84942979072,
+    "model_name": "EulerDiscreteScheduler",
+    "loading": {
+        "disk_to_host_mem_time": 0.03256392478942871,
+        "host_mem_to_gpu_time": 0.0,
+        "gpu_memory_required": 0.0
+    },
+    "execution": [
+        {
+            "mode": "init",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.00010886192321777344,
+                    "gpu_memory_used": 1536.0
+                }
+            ]
+        },
+        {
+            "mode": "scale_model_input",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 9.465217590332031e-05,
+                    "gpu_memory_used": 1049600.0
+                }
+            ]
+        },
+        {
+            "mode": "init_noise_sigma",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 3.457069396972656e-05,
+                    "gpu_memory_used": 1049600.0
+                }
+            ]
+        },
+        {
+            "mode": "step",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.0001674652099609375,
+                    "gpu_memory_used": 6292480.0
+                }
+            ]
+        },
+        {
+            "mode": "step_classifier_free_guidance",
+            "results": [
+                {
+                    "batch_size": 1,
+                    "height": 1024,
+                    "width": 1024,
+                    "execution_time": 0.00017480850219726564,
+                    "gpu_memory_used": 7341056.0
+                }
+            ]
+        }
+    ]
+}
