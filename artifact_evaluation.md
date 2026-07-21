@@ -17,17 +17,40 @@ Detailed software dependencies are listed in `Dockerfile` and `requirements.txt`
 
 To streamline the artifact evaluation process, we provide on-demand access to a preconfigured AWS instance that satisfies these hardware and software requirements.
 
-## Run DiFlow with Docker
+## Run DiFlow in a Container
 
-**We have already pulled the image on the provided machine**, since it is over 150 GiB. We have also downloaded the models from Hugging Face. To download the models yourself, use `download_models.sh`. Building the container image from scratch may take 20 minutes or longer.
+### Running on a Pod
+
+If you are using the provided RunPod GPU Cloud environment, the pod has already been configured and the required Hugging Face models have already been downloaded. To download the models manually, run `download_models.sh`. We will provide the SSH command needed to log in to the pod.
+
+After entering the pod, use the following commands to prepare for evaluation:
 
 ```bash
-# We have pulled the image on the provided machine. You can skip this.
-# On your own machine, pull the prebuilt Docker image with:
+$ cd /workspace/DiFlow-AE
+
+# Log in to your Hugging Face account to download models.
+# You can skip this step when using the provided RunPod environment.
+$ hf auth login
+
+# Download the required models.
+# You can skip this step when using the provided RunPod environment.
+$ ./download_models.sh
+
+# Generate worker_hostfile. This step is required.
+# You can skip this step when using the provided RunPod environment.
+$ ./ae-scripts/gen_hostfile.sh
+```
+
+### Running on a Server or VM
+
+Use the following commands if you are running the artifact on a server or virtual machine.
+
+```bash
+# On your own machine, pull the prebuilt Docker image:
 $ docker pull smarterlsy/diflow-ae:latest
 
-# Clear the previously running container, if any.
-$ docker kill diflow-ae
+# Stop any previously running container with the same name, if one exists.
+$ docker kill diflow-ae || true
 
 # Run the container in detached mode with GPU support.
 $ docker run --gpus all --rm -it -d --name diflow-ae --shm-size 16G -v ./models:/root/models smarterlsy/diflow-ae:latest sleep infinity
@@ -35,13 +58,13 @@ $ docker run --gpus all --rm -it -d --name diflow-ae --shm-size 16G -v ./models:
 # Access the container shell.
 $ docker exec -it diflow-ae zsh
 
-# Login your Hugging Face account to download models 
+# Log in to your Hugging Face account to download models.
 $ hf auth login
 
-# Download required models
+# Download the required models.
 $ ./download_models.sh
 
-# Run the command to prepare a worker_hostfile. This is important.
+# Generate worker_hostfile. This step is required.
 $ ./ae-scripts/gen_hostfile.sh
 ```
 
