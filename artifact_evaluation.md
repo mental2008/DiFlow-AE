@@ -83,6 +83,8 @@ We first run three microbenchmarks to validate image-generation correctness, spe
 First, we validate the correctness of image generation with DiFlow. In Section 7.1 of the paper, we claim that DiFlow does not alter the computation performed during diffusion inference.
 
 ```bash
+$ cd /workspace/DiFlow-AE
+
 # First, run the Diffusers script to generate an image using Flux-Schnell.
 $ python3 diffusers_inference/flux_schnell.py
 
