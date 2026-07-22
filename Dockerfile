@@ -16,9 +16,10 @@ FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
         python3 python3-dev python3-pip python3-venv \
-        git ninja-build zsh vim \
+        git ninja-build openssh-server zsh vim \
         openmpi-bin libopenmpi-dev \
         libgl1 libglib2.0-0 \
+    && mkdir -p /run/sshd \
     && rm -rf /var/lib/apt/lists/*
 
 # zsh shell setup for interactive container sessions.
@@ -28,7 +29,8 @@ RUN git clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git /root/.oh-my-zsh 
     && git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git \
         /root/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting \
     && cp /root/.oh-my-zsh/templates/zshrc.zsh-template /root/.zshrc \
-    && sed -i 's/^plugins=(git)$/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' /root/.zshrc
+    && sed -i 's/^plugins=(git)$/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/' /root/.zshrc \
+    && chsh -s /bin/zsh root
 
 # Torch first (biggest layer, changes least often). torch 2.5.1 on PyPI is the
 # cu124 build, matching the base image.
@@ -48,6 +50,9 @@ RUN pip install --no-cache-dir nvidia-nvshmem-cu12==3.7.1 \
 
 # mpi4py from source against Open MPI (the prebuilt wheel is MPICH-based)
 RUN pip install --no-cache-dir --no-binary=mpi4py mpi4py
+
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 COPY . .
 
@@ -74,4 +79,7 @@ RUN TORCH_CUDA_ARCH_LIST="8.0;8.9;9.0+PTX" \
 ENV OMPI_ALLOW_RUN_AS_ROOT=1 \
     OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
 
-CMD ["/bin/zsh"]
+EXPOSE 22
+
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+CMD ["/bin/bash", "-lc", "/usr/sbin/sshd -D -e & sleep infinity"]
